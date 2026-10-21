@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight, Instagram, MessageCircle, Video, Tag } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Reveal } from "@/components/site/Reveal";
+import { InstagramEmbed } from "@/components/site/InstagramEmbed";
 import {
   Accordion,
   AccordionContent,
@@ -310,11 +311,9 @@ function Index() {
               {posts.map((p, i) => (
                 <Reveal key={p.id} delay={i * 100} className="min-w-0">
                   <article className="overflow-hidden rounded-2xl border bg-card">
-                    <iframe
-                      src={`https://www.instagram.com/p/${p.id}/embed/`}
+                    <InstagramEmbed
+                      id={p.id}
                       title={`Publicação ${i + 1} de Júlia Silvestroni no Instagram`}
-                      loading="lazy"
-                      className="h-[540px] w-full border-0"
                     />
                     <a
                       href={p.url}
