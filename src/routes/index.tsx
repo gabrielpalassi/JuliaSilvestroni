@@ -21,8 +21,10 @@ import {
   instagramUrl,
   PLACEHOLDER,
 } from "@/content/site";
-import portrait from "@/assets/foto-profissional.png";
-import aboutPortrait from "@/assets/foto-profissional-2.png";
+import portrait from "@/assets/foto-profissional.webp";
+import portraitSmall from "@/assets/foto-profissional-720.webp";
+import aboutPortrait from "@/assets/foto-profissional-2.webp";
+import aboutPortraitSmall from "@/assets/foto-profissional-2-720.webp";
 import food1 from "@/assets/food-1.jpg";
 import food2 from "@/assets/food-2.jpg";
 
@@ -112,6 +114,8 @@ function Index() {
               <Reveal delay={150} className="relative md:absolute md:inset-0">
                 <img
                   src={portrait}
+                  srcSet={`${portraitSmall} 720w, ${portrait} 1816w`}
+                  sizes="(min-width: 1280px) 592px, (min-width: 768px) calc(50vw - 48px), calc(100vw - 48px)"
                   width={1816}
                   height={1488}
                   fetchPriority="high"
@@ -135,6 +139,8 @@ function Index() {
             <Reveal className="md:col-span-5">
               <img
                 src={aboutPortrait}
+                srcSet={`${aboutPortraitSmall} 720w, ${aboutPortrait} 1418w`}
+                sizes="(min-width: 1280px) 481px, (min-width: 768px) calc(41.667vw - 53px), calc(100vw - 48px)"
                 width={1418}
                 height={1458}
                 loading="lazy"
