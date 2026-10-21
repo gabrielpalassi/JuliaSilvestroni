@@ -11,3 +11,5 @@ Logos em SVG com fundo transparente, nome em Marcellus e descritor em DM Sans. T
 As licenças das fontes estão nos arquivos `OFL-*.txt`.
 
 Os ícones ficam em `public/`: `favicon.svg`, `favicon.ico` e `apple-touch-icon.png`. Usam o monograma branco com traço reforçado sobre fundo preto.
+
+As capas dos destaques do Instagram ficam em `destaques/`, com quatro tons de verde, versões PNG e SVG e um ZIP com os PNGs.
