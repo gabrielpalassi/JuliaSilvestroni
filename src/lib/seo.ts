@@ -1,7 +1,7 @@
 import { instagramUrl, site } from "@/content/site";
 
 export const seo = {
-  title: `${site.name} | Nutricionista online`,
+  title: `${site.name} | Nutricionista`,
   description:
     "Acompanhamento nutricional online com Júlia Silvestroni, nutricionista formada pela USP. Um plano alimentar para sua rotina, com método, leveza e resultado.",
   image: `${site.url}/og-image.png`,
