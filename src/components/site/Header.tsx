@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { nav, contactUrl, site } from "@/content/site";
 import { cn } from "@/lib/utils";
+
+const headerNav = nav.filter(({ href }) => href !== "#contato");
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -33,7 +35,7 @@ export function Header() {
           />
         </a>
         <nav aria-label="Principal" className="hidden items-center gap-8 lg:flex">
-          {nav.map((n) => (
+          {headerNav.map((n) => (
             <a
               key={n.href}
               href={n.href}
@@ -47,9 +49,13 @@ export function Header() {
             href={contactUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-primary px-5 py-2.5 text-sm text-primary-foreground transition-transform hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-lg"
           >
             Agendar consulta
+            <ArrowUpRight
+              aria-hidden="true"
+              className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            />
           </a>
         </nav>
         <button
@@ -66,7 +72,7 @@ export function Header() {
           aria-label="Mobile"
           className="border-t bg-background px-6 pb-8 pt-4 lg:hidden animate-in fade-in slide-in-from-top-2"
         >
-          {nav.map((n) => (
+          {headerNav.map((n) => (
             <a
               key={n.href}
               href={n.href}
@@ -80,9 +86,13 @@ export function Header() {
             href={contactUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 block rounded-full bg-primary py-3 text-center text-primary-foreground"
+            className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm text-primary-foreground transition-all hover:-translate-y-0.5 hover:shadow-lg"
           >
             Agendar consulta
+            <ArrowUpRight
+              aria-hidden="true"
+              className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            />
           </a>
         </nav>
       )}

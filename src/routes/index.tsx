@@ -247,7 +247,7 @@ function Index() {
         </section>
 
         {/* ABORDAGEM */}
-        <section className="bg-primary py-24 text-primary-foreground md:py-36">
+        <section id="abordagem" className="bg-primary py-24 text-primary-foreground md:py-36">
           <div className="mx-auto grid max-w-7xl gap-16 px-6 md:grid-cols-12">
             <Reveal className="md:col-span-5">
               <p className="eyebrow text-primary-foreground/60">Abordagem</p>
