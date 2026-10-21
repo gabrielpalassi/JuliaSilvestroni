@@ -78,8 +78,7 @@ function Index() {
           <div className="mx-auto grid max-w-7xl gap-12 px-6 pb-20 md:grid-cols-12 md:pb-32">
             <div className="md:col-span-6">
               <Reveal>
-                <p className="eyebrow">Comer bem pode ser simples</p>
-                <h1 className="mt-6 text-5xl leading-[1.02] md:text-7xl lg:text-[5.5rem]">
+                <h1 className="text-5xl leading-[1.02] md:text-7xl lg:text-[5.5rem]">
                   Nutrição com método, <em className="text-accent">leveza</em> e resultado.
                 </h1>
                 <p className="mt-8 max-w-md text-lg leading-relaxed text-muted-foreground">
