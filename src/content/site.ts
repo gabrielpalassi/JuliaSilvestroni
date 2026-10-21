@@ -4,7 +4,7 @@ export const PLACEHOLDER = "[A CONFIRMAR]";
 export const site = {
   name: "Júlia Silvestroni",
   title: "Nutricionista",
-  education: ["Nutrição pela Universidade de São Paulo (USP)", "Pós-graduanda pela ESPM"],
+  education: ["Nutrição pela Universidade de São Paulo (USP)"],
   crn: "CRN-3 88003/P",
   city: "São Paulo, SP",
   address: "", // atendimento apenas online
