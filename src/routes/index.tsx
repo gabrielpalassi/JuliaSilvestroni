@@ -3,6 +3,7 @@ import { ArrowUpRight, Instagram, MessageCircle, Video, Tag } from "lucide-react
 import { Header } from "@/components/site/Header";
 import { Reveal } from "@/components/site/Reveal";
 import { InstagramEmbed } from "@/components/site/InstagramEmbed";
+import { pageHead, seo, structuredData } from "@/lib/seo";
 import {
   Accordion,
   AccordionContent,
@@ -31,22 +32,8 @@ import food2 from "@/assets/food-2.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title: "Júlia Silvestroni | Nutricionista" },
-      {
-        name: "description",
-        content:
-          "Nutrição com método, leveza e resultado. Cuide da sua alimentação com um acompanhamento online pensado para você. Conheça a nutricionista Júlia Silvestroni.",
-      },
-      { property: "og:title", content: "Júlia Silvestroni | Nutricionista" },
-      {
-        property: "og:description",
-        content:
-          "Nutrição com método, leveza e resultado. Um acompanhamento online para comer bem e cuidar de você.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
+    ...pageHead({ title: seo.title, description: seo.description, path: "/" }),
+    scripts: [{ type: "application/ld+json", children: JSON.stringify(structuredData) }],
   }),
   component: Index,
 });

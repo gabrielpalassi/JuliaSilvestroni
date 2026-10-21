@@ -1,20 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { site, instagramUrl } from "@/content/site";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/privacidade")({
-  head: () => ({
-    meta: [
-      { title: "Política de privacidade | Júlia Silvestroni" },
-      { name: "description", content: "Como tratamos seus dados, em conformidade com a LGPD." },
-      { property: "og:title", content: "Política de privacidade | Júlia Silvestroni" },
-      {
-        property: "og:description",
-        content: "Como tratamos seus dados, em conformidade com a LGPD.",
-      },
-      { property: "og:type", content: "article" },
-      { name: "twitter:card", content: "summary" },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Política de privacidade | Júlia Silvestroni",
+      description: "Como tratamos seus dados, em conformidade com a LGPD.",
+      path: "/privacidade",
+    }),
   component: Privacy,
 });
 

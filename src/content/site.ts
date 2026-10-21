@@ -2,6 +2,7 @@
 export const PLACEHOLDER = "[A CONFIRMAR]";
 
 export const site = {
+  url: "https://juliasilvestroni.vercel.app",
   name: "Júlia Silvestroni",
   title: "Nutricionista",
   education: ["Nutrição pela Universidade de São Paulo (USP)"],

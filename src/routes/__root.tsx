@@ -11,6 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import { seo } from "@/lib/seo";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -78,10 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Júlia Silvestroni | Nutricionista" },
+      { title: seo.title },
       {
         name: "description",
-        content: "Nutrição com método, leveza e resultado. Um cuidado pensado para você.",
+        content: seo.description,
       },
       { name: "author", content: "Júlia Silvestroni" },
     ],
