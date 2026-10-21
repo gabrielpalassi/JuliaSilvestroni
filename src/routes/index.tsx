@@ -110,7 +110,7 @@ function Index() {
                   className="aspect-[9/10] w-full rounded-t-[12rem] rounded-b-2xl object-cover md:aspect-auto md:h-full"
                 />
                 <div className="absolute -bottom-6 -left-4 rounded-2xl bg-card px-5 py-4 shadow-xl md:-left-10">
-                  <p className="font-display text-lg">Nutricionista pela USP</p>
+                  <p className="font-display text-lg">Nutricionista USP</p>
                   <p className="text-xs text-muted-foreground">
                     {site.crn || "CRN " + PLACEHOLDER}
                   </p>
